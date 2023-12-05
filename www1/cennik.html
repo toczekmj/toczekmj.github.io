@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cennik</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/cennik.css">
+
+
+</head>
+
+
+<body>
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a class="active" href="cennik.html">Cennik</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="zapisy.html">Zapisy</a></li>
+        <li><a href="about.html">O nas</a></li>
+        <li><a href="trenerzy.html">Nasi trenerzy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+</div>
+
+
+<div class="container">
+    <div class="main">
+        <h1 id="logo">Book & Bench Press</h1>
+        <h1 class="cennik">Cennik</h1>
+
+        <button class="active" id="kb" onclick="showPricing('k')">Cennik karnetów</button>
+        <button id="tb" onclick="showPricing('t')">Cennik treningów personalnych</button>
+
+        <h1></h1>
+
+        <div class="pageContent">
+            <div id="karnet">
+                <table>
+                    <tr>
+                        <th>Rodzaj Karnetu</th>
+                        <th>Cena Standardowa</th>
+                        <th>Zniżka Studencka</th>
+                        <th>Zniżka dla Studentów UJ</th>
+                        <th>Karnet Senior</th>
+                    </tr>
+                    <tr>
+                        <td>Karnet Open</td>
+                        <td>120 PLN/miesiąc</td>
+                        <td>100 PLN/miesiąc</td>
+                        <td>80 PLN/miesiąc</td>
+                        <td>70 PLN/miesiąc</td>
+                    </tr>
+                    <tr>
+                        <td>Karnet Limited (do 15:00)</td>
+                        <td>80 PLN/miesiąc</td>
+                        <td>70 PLN/miesiąc</td>
+                        <td>60 PLN/miesiąc</td>
+                        <td>50 PLN/miesiąc</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="trening" style="display: none">
+                <table>
+                    <tr>
+                        <th>Rodzaj Treningu</th>
+                        <th>Czas Trwania</th>
+                        <th>Cena za Sesję</th>
+                        <th>Pakiet 5 Sesji</th>
+                        <th>Pakiet 10 Sesji</th>
+                    </tr>
+                    <tr>
+                        <td>Standardowy Trening Personalny</td>
+                        <td>1 godzina</td>
+                        <td>150 PLN</td>
+                        <td>700 PLN</td>
+                        <td>1300 PLN</td>
+                    </tr>
+                    <tr>
+                        <td>Specjalistyczny Trening Personalny (np. CrossFit, Pilates)</td>
+                        <td>1 godzina</td>
+                        <td>200 PLN</td>
+                        <td>950 PLN</td>
+                        <td>1800 PLN</td>
+                    </tr>
+                    <tr>
+                        <td>Konsultacje i Plan Treningowy</td>
+                        <td>30 minut</td>
+                        <td>100 PLN</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <h1></h1>
+</div>
+
+
+<footer>
+    <div class="footer">
+        <p>Michał Toczek 2023</p>
+    </div>
+</footer>
+
+
+<script>
+    function showPricing(tableId) {
+        if (tableId === 'k') {
+            document.getElementById('karnet').style.display = 'block';
+            document.getElementById('trening').style.display = 'none';
+            document.getElementById('kb').className = 'active';
+            document.getElementById('tb').className = '';
+        } else {
+            document.getElementById('trening').style.display = 'block';
+            document.getElementById('karnet').style.display = 'none';
+            document.getElementById('tb').className = 'active';
+            document.getElementById('kb').className = '';
+        }
+    }
+</script>
+</body>
+
+</html>

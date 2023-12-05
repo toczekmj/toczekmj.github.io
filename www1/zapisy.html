@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapisy na treningi</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/kontakt.css">
+
+
+    <script>
+        function submitForm() {
+            var trainer = document.getElementById('trainer').value;
+            var trainingType = document.getElementById('training-type').value;
+            var date = document.getElementById('date').value;
+            var time = document.getElementById('time').value;
+
+            alert("Pomyślnie zapisano się na trening do " + trainer + " na " + trainingType + " w dniu " + date + " o godzinie " + time);
+            return false;
+        }
+    </script>
+</head>
+
+
+<body>
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="cennik.html">Cennik</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a class="active" href="zapisy.html">Zapisy</a></li>
+        <li><a href="about.html">O nas</a></li>
+        <li><a href="trenerzy.html">Nasi trenerzy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div class="main">
+        <h1 id="logo">Book & Bench Press </h1>
+        <h2 class="cennik">Siłownia akademicka</h2>
+        <h2 class="cennik">Formularz Zapisu na Trening</h2>
+        <form>
+            <label for="trainer">Wybierz trenera:</label>
+            <select id="trainer" name="trainer">
+                <option value="Nowak">Anna Nowak</option>
+                <option value="Kowalski">Jan Kowalski</option>
+                <option value="Wiśniewski">Marcin Wiśniewski</option>
+                <option value="Wójcik">Ewa Wójcik</option>
+                <option value="Kowalczyk">Katarzyna Kowalczyk</option>
+            </select>
+
+            <label for="training-type">Rodzaj treningu:</label>
+            <select id="training-type" name="training-type">
+                <option value="fitness">Fitness</option>
+                <option value="yoga">Joga</option>
+                <option value="crossfit">Crossfit</option>
+                <option value="weightlifting">Podnoszenie ciężarów</option>
+                <option value="cardio">Cardio</option>
+            </select>
+
+            <label for="date">Data treningu:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Godzina treningu:</label>
+            <input type="time" id="time" name="time">
+
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="surname">Nazwisko:</label>
+            <input type="text" id="surname" name="surname">
+
+            <label for="phone">Numer telefonu:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="card-number">Numer karnetu:</label>
+            <input type="text" id="card-number" name="card-number">
+
+            <input type="submit" onclick="submitForm()" value="Zapisz się">
+        </form>
+
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <p>Michał Toczek 2023</p>
+    </div>
+</footer>
+</body>
+
+</html>
